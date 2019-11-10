@@ -1,0 +1,212 @@
+[
+  {
+    "oldPassword": "Agoda@987376AgodaA",
+    "newPassword": "Agoda@123456AgodaA",
+    "oldPasswordMatched": true,
+    "expectedResult": "Valid",
+    "expectedMessage": "Valid:Password Length is 18"
+  },
+  {
+    "oldPassword": "Agoda@123456AgodaAAAAA",
+    "newPassword": "Agoda@123456AgodaAAAAA",
+    "oldPasswordMatched": true,
+    "expectedResult": "Invalid",
+    "expectedMessage": "Invalid:Password same as old password."
+  },
+  {
+    "oldPassword": "Agoda@123456AgodaA",
+    "newPassword": "Agoda@654892AgodaA",
+    "oldPasswordMatched": true,
+    "expectedResult": "Valid",
+    "expectedMessage": "Valid:Password changed."
+  },
+  {
+    "oldPassword": "Agoda@987376AgodaA",
+    "newPassword": "aGODA@123456aGODAa",
+    "oldPasswordMatched": true,
+    "expectedResult": "Valid",
+    "expectedMessage": "Valid:Password Length is 18"
+  },
+  {
+    "oldPassword": "Agoda@987376AgodaA",
+    "newPassword": "aGODA@123456aGODAaaaaa",
+    "oldPasswordMatched": false,
+    "expectedResult": "Invalid",
+    "expectedMessage": "Invalid:Old password did not match with system."
+  },
+  {
+    "oldPassword": "Agoda@987376AgodaA",
+    "newPassword": "Agoda@987376AgodaA",
+    "oldPasswordMatched": false,
+    "expectedResult": "Invalid",
+    "expectedMessage": "Invalid:Old password did not match with system."
+  },
+  {
+    "oldPassword": "Agoda@987376AgodaA",
+    "newPassword": "Agoda@123456Agoda",
+    "oldPasswordMatched": true,
+    "expectedResult": "Invalid",
+    "expectedMessage": "Invalid:Password Length is 17"
+  },
+  {
+    "oldPassword": "Agoda@987376AgodaA",
+    "newPassword": "aGODA@123456aGODA",
+    "oldPasswordMatched": true,
+    "expectedResult": "Invalid",
+    "expectedMessage": "Invalid:Password Length is 17"
+  },
+  {
+    "oldPassword": "Agoda@987376AgodaA",
+    "newPassword": "agoda@123456agodaa",
+    "oldPasswordMatched": true,
+    "expectedResult": "Invalid",
+    "expectedMessage": "Invalid:Password No UpperCase"
+  },
+  {
+    "oldPassword": "Agoda@987376AgodaA",
+    "newPassword": "AGODA@123456AGODAA",
+    "oldPasswordMatched": true,
+    "expectedResult": "Invalid",
+    "expectedMessage": "Invalid:Password No LowserCase"
+  },
+  {
+    "oldPassword": "Agoda@987376AgodaA",
+    "oldPasswordMatched": true,
+    "newPassword": "Agoda1123456AgodaA",
+    "expectedResult": "Invalid",
+    "expectedMessage": "Invalid:No special Character"
+  },
+  {
+    "oldPassword": "Agoda@987376AgodaA",
+    "oldPasswordMatched": true,
+    "newPassword": "Agoda?123456AgodaA",
+    "expectedResult": "Invalid",
+    "expectedMessage": "Invalid:No valid special Character"
+  },
+  {
+    "oldPassword": "Agoda@987376AgodaA",
+    "oldPasswordMatched": true,
+    "newPassword": "Agoda*123456789daa",
+    "expectedResult": "Invalid",
+    "expectedMessage": "Invalid:50% of password is numeric"
+  },
+  {
+    "oldPassword": "Agoda@987376AgodaA",
+    "oldPasswordMatched": true,
+    "newPassword": "Agoda*12345678daa",
+    "expectedResult": "Invalid",
+    "expectedMessage": "Invalid: Password length <18"
+  },
+  {
+    "oldPassword": "Agoda@987376AgodaA",
+    "oldPasswordMatched": true,
+    "newPassword": "Agoda?1234567890aa",
+    "expectedResult": "Invalid",
+    "expectedMessage": "Invalid:Password"
+  },
+  {
+    "oldPassword": "Agoda@987376AgodaA",
+    "oldPasswordMatched": true,
+    "newPassword": "AgodA@123456AgodAa",
+    "expectedResult": "Valid",
+    "expectedMessage": "Valid:Password"
+  },
+  {
+    "oldPassword": "Agoda@987376AgodaA",
+    "oldPasswordMatched": true,
+    "newPassword": "AgOdA#1234567a9aAa",
+    "expectedResult": "Valid",
+    "expectedMessage": "Valid:Password"
+  },
+  {
+    "oldPassword": "Agoda@987376AgodaA",
+    "oldPasswordMatched": true,
+    "newPassword": "AGOdA!123456789Aaa",
+    "expectedResult": "Invalid",
+    "expectedMessage": "Invalid:Password numeric length 50% of password"
+  },
+  {
+    "oldPassword": "Agoda@987376AgodaA",
+    "oldPasswordMatched": true,
+    "newPassword": "AGODA$1202$45624Aa",
+    "expectedResult": "Invalid",
+    "expectedMessage": "Invalid:Password numeric length 50% of password"
+  },
+  {
+    "oldPassword": "Agoda@987376AgodaA",
+    "oldPasswordMatched": true,
+    "newPassword": "AGODA$1202$45a2S4Aa",
+    "expectedResult": "Valid",
+    "expectedMessage": "Valid:Password"
+  },
+  {
+    "oldPassword": "Agoda@987376AgodaA",
+    "oldPasswordMatched": true,
+    "newPassword": "AGODA@261@62@26aDAr7Aa",
+    "expectedResult": "Valid",
+    "expectedMessage": "Valid:Password"
+  },
+  {
+    "oldPassword": "Agoda@987376AgodaA",
+    "oldPasswordMatched": true,
+    "newPassword": "agoda*1*2*4*5*6**",
+    "expectedResult": "Invalid",
+    "expectedMessage": "Invalid:Password contains more than 4 special characters"
+  },
+  {
+    "oldPassword": "Agoda@987376AgodaA",
+    "oldPasswordMatched": true,
+    "newPassword": "Agoda1*!Agoda1*Ago",
+    "expectedResult": "Valid",
+    "expectedMessage": "Valid:Password"
+  },
+  {
+    "oldPassword": "Agoda@987376AgodaA",
+    "oldPasswordMatched": true,
+    "newPassword": "Agoda@aaa1MFNWNFGNFNDNS",
+    "expectedResult": "Valid",
+    "expectedMessage": "Valid:Password"
+  },
+  {
+    "oldPassword": "Agoda@123456Agoda",
+    "oldPasswordMatched": true,
+    "newPassword": "Agoda@aaaa1MF12acssad!",
+    "expectedResult": "Valid",
+    "expectedMessage": "Valid:Password"
+  },
+  {
+    "oldPassword": "Agoda@123456Agoda",
+    "oldPasswordMatched": true,
+    "newPassword": "Agoda#aaaaa1MF12acssad$",
+    "expectedResult": "Invalid",
+    "expectedMessage": "Invalid:Password repated character more than 4 times"
+  },
+  {
+    "oldPassword": "Agoda@123456Agoda",
+    "oldPasswordMatched": true,
+    "newPassword": "Agoda123456781!@#$aa",
+    "expectedResult": "Valid",
+    "expectedMessage": "Valid:Password"
+  },
+  {
+    "oldPassword": "Agoda@123456Agoda",
+    "oldPasswordMatched": true,
+    "newPassword": "Agoda12345678910!@#$AB",
+    "expectedResult": "Invalid",
+    "expectedMessage": "Invalid:Password more than 4 special characters"
+  },
+  {
+    "oldPassword": "Agoda@123456Agoda",
+    "oldPasswordMatched": true,
+    "newPassword": "!**Agoda123456#$abcd",
+    "expectedResult": "Invalid",
+    "expectedMessage": "Invalid:Password more than 4 special characters"
+  },
+  {
+    "oldPassword": "Agoda@123456Agoda",
+    "oldPasswordMatched": true,
+    "newPassword": "Agoda@aaaaa1MF12acsssssd!",
+    "expectedResult": "Invalid",
+    "expectedMessage": "Invalid:Password more than 4 special characters"
+  }
+]
